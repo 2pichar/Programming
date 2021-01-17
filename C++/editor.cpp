@@ -1,5 +1,4 @@
-#include "standard.cpp"
-
+#include "standard.hpp"
 using namespace std;
 
 string text;
