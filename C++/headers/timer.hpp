@@ -1,6 +1,8 @@
+#pragma once
 #include <iostream>
 #include <thread>
 #include <chrono>
+
 namespace timer {
 	class Timeout {
 		public:
@@ -14,6 +16,8 @@ namespace timer {
 				t.detach();
 			}
 			void clear();
+			bool getCleared();
+		private:
 			bool cleared = false;
 	};
 
@@ -31,6 +35,8 @@ namespace timer {
 			t.detach();
 			}
 			void clear();
+			bool getCleared();
+		private:
 			bool cleared = false;
 	};
 
@@ -49,5 +55,11 @@ namespace timer {
 	}
 	void Interval::clear() {
 			this->cleared = true;
+	}
+	bool Timeout::getCleared(){
+		return this->cleared;
+	}
+	bool Interval::getCleared(){
+		return this->cleared;
 	}
 }

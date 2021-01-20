@@ -1,3 +1,4 @@
+#pragma once
 #include "headers/algorithms.hpp"
 #include "headers/containers.hpp"
 #include "headers/cwrappers.hpp"
