@@ -11,3 +11,4 @@
 #include "headers/threads.hpp"
 #include "headers/timer.hpp"
 #include "headers/utilities.hpp"
+#include "headers/types.hpp"
