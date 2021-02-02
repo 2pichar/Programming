@@ -6,8 +6,6 @@ map<string, string> types = {{"i", "int"},{"Pi", "int*"},{"PKi", "const int*"},{
 
 template <typename T>
 string getType(T type){
-	const char* CPid = typeid(type).name();
-	char* Pid = const_cast<char*>(CPid);
-	string Sid(Pid);
-	return types[Sid];
+	string id(const_cast<char*>(typeid(type).name()));
+	return types[id];
 };
