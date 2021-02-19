@@ -1,6 +1,6 @@
 {
 	"name": "obj",
-	"desc": "A set of functions for calling on assorted standard objects.",
+	"desc": "A set of functions for calling on objects.",
 	"main": "./obj.js",
 	"exports": {
 		".": "./obj.js",

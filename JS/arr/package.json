@@ -1,0 +1,11 @@
+{
+	"name": "arr",
+	"desc": "A set of functions for calling on arrays.",
+	"main": "./arr.js",
+	"exports": {
+		".": "./arr.js",
+		"./arr": "./arr.js",
+		"./arr.js": "./arr.js",
+		"./package.json": "./package.json"
+	}
+}
