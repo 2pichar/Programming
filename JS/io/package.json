@@ -1,0 +1,11 @@
+{
+	"name": "io",
+	"desc": "An better set of functions for input/output.",
+	"main": "./io.js",
+	"exports": {
+		".": "./io.js",
+		"./io": "./io.js",
+		"./io.js": "./io.js",
+		"./package.json": "./package.json"
+	}
+}

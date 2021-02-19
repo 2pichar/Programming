@@ -1,0 +1,11 @@
+{
+	"name": "obj",
+	"desc": "A set of functions for calling on assorted standard objects.",
+	"main": "./obj.js",
+	"exports": {
+		".": "./obj.js",
+		"./obj": "./obj.js",
+		"./obj.js": "./obj.js",
+		"./package.json": "./package.json"
+	}
+}
