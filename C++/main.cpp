@@ -1,4 +1,4 @@
-#include "C++/standard.hpp"
+#include "standard.hpp"
 
 using namespace std;
 using namespace timer;

@@ -1,0 +1,49 @@
+#!/bin/bash
+declare args="$@"
+declare shorts='o:f:h'
+declare longs='help'
+declare opts=`getopt -o $shorts -l $longs -- $args`
+eval set -- "$opts"
+declare outfile='a.out'
+declare file=''
+declare ext=''
+help () {
+	echo "Usage is: compile [options] file"
+	echo "Options are:"
+	echo "	 -o							select output file"
+	echo "	 -f							select input file"
+	echo "	 -h | --help				displays this help text"
+}
+while test $1 != --; do
+	case $1 in
+		-o )
+			outfile=$2
+			shift 2
+			;;
+		-f )
+			file=$2
+			shift 2
+			;;
+		-h | --help )
+			help
+			exit
+			;;
+	esac
+done
+shift 1
+if [ $# -ne 0 ]; then
+	file=$1
+	shift 1
+fi
+
+ext=${file##*.}
+outfile=/home/runner/Programming/Outputs/$outfile
+if [ "$ext" == 'c' ]; then
+	gcc $file -o $outfile;
+elif [ "$ext" == 'cpp' -o "$ext" == 'c++' ]; then
+	g++ $file -o $outfile;
+elif [ "$ext" == 'cs' ]; then
+	mcs -out:$outfile $file;
+else
+	help
+fi

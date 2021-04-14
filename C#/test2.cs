@@ -1,6 +1,11 @@
 using System;
-namespace test{
-	public static void Program.test(){
-		Console.WriteLine("hi");
-	};
+namespace test
+{
+	public class Test
+	{
+		public static void test()
+		{
+			Console.WriteLine("test");
+		}
+	}
 }
