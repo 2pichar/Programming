@@ -1,1 +1,0 @@
-for file in $(ls -A boot); do bash boot/$file; done;

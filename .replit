@@ -1,1 +1,2 @@
-onBoot = "bash boot.sh"
+language="HTML-CSS"
+onBoot = "echo booting"
